@@ -7,6 +7,7 @@ dotenv.config()
 
 //router import
 const studentRoutes = require('./routes/studentRouters')
+const departmentRoutes = require('./routes/departmentRouters')
 
 
 //mongodb connection
@@ -20,6 +21,7 @@ app.use(express.json())
 
 //routes
 app.use('/api/v1/student', studentRoutes)
+app.use('/api/v1/department', departmentRoutes)
 
 
 
