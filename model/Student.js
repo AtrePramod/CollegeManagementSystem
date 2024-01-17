@@ -3,7 +3,7 @@ const mongoose = require('mongoose');
 const studentSchema = new mongoose.Schema({
     StudentID:
     {
-        type: Number,
+        type: String,
         required: [true, "StudentID is required"],
         unique: true
     },
@@ -19,7 +19,7 @@ const studentSchema = new mongoose.Schema({
     },
     DateOfBirth:
     {
-        type: Date
+        type: String
     },
     Email:
     {
