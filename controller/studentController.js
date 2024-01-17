@@ -32,12 +32,33 @@ exports.registerStudentController = async (req, res) => {
             stud: newStudent,
         });
     } catch (err) {
-        console.error(err);
+        // console.error(err);
         return res.status(500).json({
             success: false,
             message: 'Error in student register callback',
-            error: err.message,  
+            error: err.message,
             stack: err.stack,
         });
     }
 };
+
+
+exports.gettAllStudentController = async (req, res) => {
+    try {
+        const students = await studentModel.find()
+
+        return res.status(201).send({
+            success: true,
+            message: "Login successfully",
+            students
+        })
+
+    } catch (error) {
+        return res.status(500).json({
+            success: false,
+            message: 'Error in Get all student  callback',
+            error: err.message,
+
+        });
+    }
+}
