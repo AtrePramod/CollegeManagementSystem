@@ -3,7 +3,7 @@ const mongoose = require('mongoose');
 const gradeSchema = new mongoose.Schema({
     GradeID:
     {
-        type: Number,
+        type: String,
         required: [true, "GradeID is required"],
         unique: true
     },

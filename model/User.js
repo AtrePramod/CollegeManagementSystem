@@ -3,7 +3,7 @@ const mongoose = require('mongoose');
 const userSchema = new mongoose.Schema({
     UserID:
     {
-        type: Number,
+        type: String,
         required: [true, "UserID is required"],
         unique: true
     },

@@ -3,7 +3,7 @@ const mongoose = require('mongoose');
 const staffSchema = new mongoose.Schema({
     StaffID:
     {
-        type: Number,
+        type: String,
         required: [true, "StaffId is required"],
         unique: true
     },
