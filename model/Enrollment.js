@@ -3,7 +3,7 @@ const mongoose = require('mongoose');
 const enrollmentSchema = new mongoose.Schema({
     EnrollmentID:
     {
-        type: Number,
+        type: String,
         required: [true, "EnrollmentID is required"],
         unique: true
     },
