@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>User Profile - College Management System</title>
+    <!-- Link Bootstrap CSS -->
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+    />
+    <!-- Add your custom styles or additional head elements here -->
+    <style>
+      /* Add your custom CSS styles here */
+      body {
+        font-family: Arial, sans-serif;
+        line-height: 1.6;
+        margin: 20px;
+      }
+
+      h1 {
+        color: #333;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- <app-navbar></app-navbar> -->
+    <div class="container mt-4">
+      <h1>User Profile</h1>
+
+      <!-- User Information -->
+      <div class="card mb-4">
+        <div class="card-body">
+          <h5 class="card-title">User Information</h5>
+          <p><strong>User ID:</strong> [User ID]</p>
+          <p><strong>Username:</strong> [Username]</p>
+          <p><strong>Email:</strong> [Email]</p>
+          <p><strong>Role:</strong> [User Role]</p>
+        </div>
+      </div>
+
+      <!-- Update Profile Form -->
+      <div class="card mb-4">
+        <div class="card-body">
+          <h5 class="card-title">Update Profile</h5>
+          <form>
+            <div class="form-group">
+              <label for="firstName">First Name:</label>
+              <input
+                type="text"
+                class="form-control"
+                id="firstName"
+                placeholder="Enter your first name"
+              />
+            </div>
+            <div class="form-group">
+              <label for="lastName">Last Name:</label>
+              <input
+                type="text"
+                class="form-control"
+                id="lastName"
+                placeholder="Enter your last name"
+              />
+            </div>
+            <button type="submit" class="btn btn-primary">
+              Update Profile
+            </button>
+          </form>
+        </div>
+      </div>
+
+      <!-- Change Password Form -->
+      <div class="card mb-4">
+        <div class="card-body">
+          <h5 class="card-title">Change Password</h5>
+          <form>
+            <div class="form-group">
+              <label for="currentPassword">Current Password:</label>
+              <input
+                type="password"
+                class="form-control"
+                id="currentPassword"
+                placeholder="Enter current password"
+              />
+            </div>
+            <div class="form-group">
+              <label for="newPassword">New Password:</label>
+              <input
+                type="password"
+                class="form-control"
+                id="newPassword"
+                placeholder="Enter new password"
+              />
+            </div>
+            <div class="form-group">
+              <label for="confirmPassword">Confirm Password:</label>
+              <input
+                type="password"
+                class="form-control"
+                id="confirmPassword"
+                placeholder="Confirm new password"
+              />
+            </div>
+            <button type="submit" class="btn btn-primary">
+              Change Password
+            </button>
+          </form>
+        </div>
+      </div>
+    </div>
+
+    <!-- Link Bootstrap JS and Popper.js -->
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+  </body>
+</html>
