@@ -8,6 +8,10 @@ const studentRoutes = require('./routes/studentRouters')
 const departmentRoutes = require('./routes/departmentRouters')
 const courseRoutes = require('./routes/coureseRouters')
 const enrollRoutes = require('./routes/enrollmentRouter')
+const facultyRoutes = require('./routes/facultyRouter')
+const gradesRoutes = require('./routes/gradeRouter')
+const staffRoutes = require('./routes/staffRouter')
+const userRoutes = require('./routes/userRouter')
 
 
 connectDB();
@@ -20,6 +24,10 @@ app.use('/api/v1/student', studentRoutes)
 app.use('/api/v1/department', departmentRoutes)
 app.use('/api/v1/course', courseRoutes)
 app.use('/api/v1/enroll', enrollRoutes)
+app.use('/api/v1/faculty', facultyRoutes)
+app.use('/api/v1/grade', gradesRoutes)
+app.use('/api/v1/staff', staffRoutes)
+app.use('/api/v1/user', userRoutes)
 
 
 

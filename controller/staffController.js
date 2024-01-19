@@ -3,7 +3,7 @@ const staffModel = require("../model/Staff")
 exports.createStaffContrller = async (req, res) => {
     try {
         const { StaffID, FirstName, LastName, Email, PhoneNumber, DepartmentID } = req.body
-        if (!StaffID || FirstName || !LastName || !Email || !PhoneNumber || !DepartmentID) {
+        if (!StaffID || !FirstName || !LastName || !Email || !PhoneNumber || !DepartmentID) {
             return res.status(401).send({
                 success: false,
                 message: "Please provide the all fields"
@@ -21,7 +21,7 @@ exports.createStaffContrller = async (req, res) => {
         const staff = await new staffModel({ StaffID, FirstName, LastName, Email, PhoneNumber, DepartmentID })
         await staff.save()
 
-        returnres.status(201).send({
+        return res.status(201).send({
             success: true,
             message: "created new staff successfully",
             staff
@@ -32,7 +32,7 @@ exports.createStaffContrller = async (req, res) => {
         return res.status(501).send({
             success: false,
             message: "Error in the new creating staff",
-            error: error
+            error: error.message
         })
     }
 }

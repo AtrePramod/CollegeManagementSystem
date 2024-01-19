@@ -3,7 +3,7 @@ const userModel = require("../model/User")
 exports.createUserModel = async (req, res) => {
     try {
         const { UserID, Username, Password, UserType, StudentID, StaffID } = req.body
-        if (!UserID || !Username || !Password || !UserType || !StudentID || !StaffID) {
+        if (!UserID || !Username || !Password || !UserType) {
             return res.status(401).send({
                 success: false,
                 message: "Please provide all fields",
