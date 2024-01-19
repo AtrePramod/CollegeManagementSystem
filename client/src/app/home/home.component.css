@@ -12,3 +12,6 @@
   p {
       color: #666;
   }
+  .fix{
+    position: fixed;
+  }

@@ -1,3 +1,12 @@
 .navbar{
-    background-color: rgba(88, 84, 84, 0.214)!important;
+    background-color: rgb(21, 17, 237)!important;
+}
+.nav1{
+box-shadow: 10px 10px 10px rgba(40, 39, 39, 0.549);
+position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 100;
+   
 }
