@@ -7,11 +7,7 @@ const routes: Routes = [
     path: "",
     component:HomeComponent
   },
-  {
-    path: "student",
-    loadChildren:()=>import("./student/student.module").then(m => m.StudentModule)
-     
-  }
+   
 ];
 
 @NgModule({
