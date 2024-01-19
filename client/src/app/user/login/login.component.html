@@ -1,17 +1,7 @@
 <app-navbar></app-navbar>
-<!-- <div class="container mt-4 pt-5 mt-5 justify-content-center w-50">
-  <div class="card mb-5">
-    <div class="card-body">
-      <h5 class="card-title">User Information</h5>
-      <p><strong>User ID:</strong> [User ID]</p>
-      <p><strong>Username:</strong> [Username]</p>
-      <p><strong>Email:</strong> [Email]</p>
-      <p><strong>Role:</strong> [User Role]</p>
-    </div>
-  </div>
-</div> -->
+
 <body class="text-center">
-  <form class="login-form">
+  <form class="login-form" (ngSubmit)="onSubmit()">
     <img
       class="mb-4"
       src="../../../assets/profile.jpeg"
@@ -26,6 +16,8 @@
       id="inputEmail"
       class="form-control mb-2 mt-3"
       placeholder="Email address"
+      name="Username"
+      [(ngModel)]="userData.Username"
       required
       autofocus
     />
@@ -33,12 +25,27 @@
     <input
       type="password"
       id="inputPassword"
+      name="Password"
+      [(ngModel)]="userData.Password"
       class="form-control mb-3 mt-4"
       placeholder="Password"
       required
     />
     <div class="checkbox mb-3">
-      <label> <input type="checkbox" value="remember-me" /> Remember me </label>
+      <!-- User Type Dropdown -->
+      <label for="userType" class="sr-only">User Type</label>
+      <select
+        id="userType"
+        class="form-control mb-3"
+        name="UserType"
+        [(ngModel)]="userData.UserType"
+        required
+      >
+        <option value="" disabled selected>Select User Type</option>
+        <option value="Student">Student</option>
+        <option value="Staff">Staff</option>
+        <!-- Add more user types as needed -->
+      </select>
     </div>
     <button class="btn btn-lg btn-primary btn-block" type="submit">
       Sign in

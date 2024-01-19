@@ -1,0 +1,12 @@
+ body {
+     height: 100vh;
+     display: flex;
+     align-items: center;
+     justify-content: center;
+ }
+
+ .signup-form {
+     max-width: 400px;
+     padding: 15px;
+     margin: auto;
+ }

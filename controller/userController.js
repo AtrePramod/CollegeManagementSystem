@@ -53,3 +53,46 @@ exports.getAllUserModel = async (req, res) => {
         });
     }
 }
+
+exports.loginUserController = async (req, res) => {
+    try {
+        const { Username, Password, UserType } = req.body
+
+        if (!Username || !Password || !UserType) {
+            return res.status(401).send({
+                success: false,
+                message: "Please provide all fields"
+            })
+        }
+
+        const user = await userModel.findOne({ Username: Username, UserType: UserType })
+        if (!user) {
+            return res.status(401).send({
+                success: false,
+                message: "Invaild User",
+            })
+        }
+        const isMatch = await userModel.findOne({ Username: Username, Password: Password })
+
+        if (!isMatch) {
+            return res.status(401).send(
+                {
+                    success: false,
+                    message: "Invalid Username and password"
+                }
+            )
+        }
+        return res.status(200).send({
+            success: true,
+            message: "Login successfully",
+            isMatch
+        })
+
+    } catch (error) {
+        return res.status(501).send({
+            success: false,
+            message: 'Error in get all user callback',
+            error: error.message
+        });
+    }
+}
